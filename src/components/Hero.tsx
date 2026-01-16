@@ -2,7 +2,7 @@ import { useTypingEffect } from '../hooks/useAnimations';
 import FloatingObjects from './FloatingObjects';
 
 const Hero = () => {
-  const typingRef = useTypingEffect("Software Developer", 80);
+  const typingRef = useTypingEffect("Fullstack Software Developer", 80);
 
   return (
     <section id="home" className="min-h-screen flex items-center justify-center animated-bg relative overflow-hidden pb-5">
