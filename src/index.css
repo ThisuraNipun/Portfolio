@@ -1,5 +1,12 @@
 @import "tailwindcss";
 
+/* Base dark background — prevents flash of white */
+html,
+body {
+  background-color: #0f0f23;
+  color: #ffffff;
+}
+
 /* Custom scrolling behavior */
 html {
   scroll-behavior: smooth;

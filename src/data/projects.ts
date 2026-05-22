@@ -3,7 +3,7 @@ export interface Project
   id: number;
   title: string;
   description: string;
-  longDescription: string;
+  longDescription: string | string[];
   image: string;
   gallery: string[];
   technologies: string[];
@@ -33,7 +33,7 @@ export const projects: Project[] = [
       "/GL-5.png",
     ],
     technologies: ["HTML", "Bootstrap", "PHP", "MySQL"],
-    github: "https://github.com",
+    github: "https://github.com/ThisuraNipun/GreenLife_Wellness_Center_Web_Application",
     demo: "https://demo.com",
     featured: true,
     features: [
@@ -57,10 +57,12 @@ export const projects: Project[] = [
       "LuxeVista Resort is a premium Android mobile application developed for a luxury resort chain. It enables guests to explore resort amenities, browse available rooms with 360° virtual tours, make direct reservations, and manage their stays — all from their smartphone. The app leverages Firebase for real-time data sync and push notifications, ensuring guests are always informed about their upcoming bookings and resort offers.",
     image: "/LuxeVista.png",
     gallery: [
-      "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=800&h=500&fit=crop",
-      "https://images.unsplash.com/photo-1551882547-ff40c63fe2fa?w=800&h=500&fit=crop",
-      "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&h=500&fit=crop",
-      "https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&h=500&fit=crop",
+      "/LV-1.jpg",
+      "/LV-2.jpg",
+      "/LV-3.jpg",
+      "/LV-4.jpg",
+      "/LV-5.png",
+      "/LV-6.jpg",
     ],
     technologies: ["Java", "Kotlin", "Firebase"],
     github: "https://github.com",
@@ -80,11 +82,14 @@ export const projects: Project[] = [
   },
   {
     id: 3,
-    title: "Gadget Hub",
+    title: "The Gadget Hub - Distributed E-Commerce Platform",
     description:
-      "A responsive e-commerce platform for tech gadgets, featuring product browsing, filtering, cart management, and checkout.",
+      "A service-oriented web application that aggregates multiple distributors to provide real-time price comparison and automated order processing.",
     longDescription:
-      "Gadget Hub is a modern e-commerce platform dedicated to tech enthusiasts. Built with Vue.js and powered by a JavaScript backend, it delivers a smooth shopping experience with advanced product filtering, wishlist management, and a streamlined multi-step checkout flow. Interactive charts powered by Chart.js give users insight into product ratings and sales trends.",
+      ["The Gadget Hub is a service-oriented e-commerce platform that connects customers with multiple electronic distributors to automate product comparison and order processing.",
+        "The system is designed using SOA principles, separating core functionalities into independent services such as quotation management, order processing, and notifications.",
+        "Built with a PHP frontend and a C#(.NET) backend, the application integrates RESTful APIs, transactional database operations, and Swagger- based API documentation to ensure scalability, maintainability, and reliability."],
+
     image: "https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?w=800&h=500&fit=crop&crop=center",
     gallery: [
       "https://images.unsplash.com/photo-1491933382434-500287f9b54b?w=800&h=500&fit=crop",
@@ -92,18 +97,20 @@ export const projects: Project[] = [
       "https://images.unsplash.com/photo-1593640408182-31c228f29e55?w=800&h=500&fit=crop",
       "https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?w=800&h=500&fit=crop",
     ],
-    technologies: ["Vue.js", "JavaScript", "Chart.js", "Weather API"],
+    technologies: ["Service-Oriented Architecture (SOA)", "PHP", "HTML", "Tailwind CSS", "JavaScript", "C# (.NET Framework)", "REST API", "Swagger", "SQL Server (ADO.NET)"],
     github: "https://github.com",
     demo: "https://demo.com",
-    featured: false,
+    featured: true,
     features: [
-      "Advanced product search and filtering",
-      "Wishlist and cart management",
-      "Multi-step checkout flow",
-      "Interactive sales & rating charts",
-      "Responsive mobile-first design",
+      "Multi-distributor quotation system (TechWorld, ElectroCom, Gadget Central)",
+      "Automated price comparison engine",
+      "Order lifecycle management (request → compare → confirm)",
+      "Role-based access control (Admin / Customer / Distributor)",
+      "REST API with Swagger documentation",
+      "Transaction-safe order processing using SQL Server (ADO.NET)",
+      "Responsive UI with Tailwind CSS"
     ],
-    role: "Frontend Developer",
+    role: "Full Stack Developer",
     duration: "2 months",
     status: "Completed",
   },
